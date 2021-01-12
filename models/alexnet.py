@@ -4,7 +4,8 @@ from torch.hub import load_state_dict_from_url
 
 class AlexNet(nn.Module):
     """AlexNet model architecture from the
-       `"One weird trick..." <https://arxiv.org/abs/1404.5997>`_ paper.
+        origin paper: <http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf>
+       `"One weird trick..." <https://arxiv.org/abs/1202.2745>`_ paper.
     """
     def __init__(self, num_classes=1000):
         super(AlexNet, self).__init__()

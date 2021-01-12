@@ -12,8 +12,9 @@
 
 # model_zoo(imagenet dataset)
 - batch_time is a reference value, not necessarily accurate, please use it with caution.
+- batch_time(s/each 256 image) [One 1080Ti GPU]
 
-| model | top1-acc | top5-acc | batch_time(s/each 256 image) [One 1080Ti GPU] |
+| model | top1-acc | top5-acc | 1080Ti |
 | --- | --- | --- | --- |
 | alexnet | 56.630 | 79.054 | 0.488 |
 | vgg11 | 68.872 | 88.658 | 0.521 |
@@ -74,8 +75,12 @@
 | regnet_1600M | 76.996 | 93.452 | 0.510 |
 | regnet_3200M | 78.358 | 94.162 | 0.523 |
 | regnet_6400M | 79.202 | 94.764 | 0.659 |
-
-
+| resnest50 | 80.970 | 95.350 | 1.074 |
+| resnest50_fast_1s1x64d | 80.150 | 95.112 | 0.513 |
+| resnest50_fast_2s1x64d | 80.472 | 95.262 | 0.554 |
+| resnest50_fast_1s2x40d | 80.400 | 95.310 | 0.558 |
+| resnest50_fast_2s2x40d | 80.626 | 95.412 | 0.561 |
+| resnest50_fast_1s4x24d | 80.870 | 95.364 | 0.550 |
 
 
 
