@@ -25,7 +25,10 @@ class GlobalAvgPool2d(nn.Module):
         super(GlobalAvgPool2d, self).__init__()
 
     def forward(self, inputs):
-        return F.adaptive_avg_pool2d(inputs, 1).view(inputs.size(0), -1)
+        out = F.adaptive_avg_pool2d(inputs, 1)
+        #out = out.view(inputs.size(0), -1)
+        #return F.adaptive_avg_pool2d(inputs, 1).view(inputs.size(0), -1)
+        return out
 
 class Bottleneck(nn.Module):
     """ResNet Bottleneck
@@ -295,7 +298,6 @@ class ResNet(nn.Module):
         x = self.layer2(x)
         x = self.layer3(x)
         x = self.layer4(x)
-
         x = self.avgpool(x)
         #x = x.view(x.size(0), -1)
         x = torch.flatten(x, 1)

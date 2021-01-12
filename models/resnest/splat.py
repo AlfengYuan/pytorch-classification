@@ -71,7 +71,8 @@ class SplAtConv2d(Module):
         gap = self.relu(gap)
 
         atten = self.fc2(gap)
-        atten = self.rsoftmax(atten).view(batch, -1, 1, 1)
+        atten = self.rsoftmax(atten)
+        atten = atten.view(batch, -1, 1, 1)
 
         if self.radix > 1:
             if torch.__version__ < '1.5':
