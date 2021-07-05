@@ -10,6 +10,9 @@
 ## visual
 - python visualization.py alexnet
 
+## generate_json.py(Generate Json File for [tensorrtCV](https://github.com/wdhao/tensorrtCV))
+- python generate_json.py -a alennet --pretrained
+
 # model_zoo(imagenet dataset)
 - batch_time is a reference value, not necessarily accurate, please use it with caution.
 - batch_time(s/each 256 image) [One 1080Ti GPU]
